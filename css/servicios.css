@@ -1,0 +1,105 @@
+
+@media(max-width:936px){
+    #servicios h2 {
+        font-size: 33px;
+    }
+
+    #servicios1 h2 {
+        font-size: 34px;
+        
+    }
+
+    #diseño h2 {
+        font-size: 45px;
+        
+    }
+
+    .contenido {
+        font-size: 18px;
+        
+    }
+
+    .tecnologias img{
+        width: 90px;
+    }
+
+    .parrafo3 {
+        font-size: 19px;
+    }
+
+    #diseño h2 {
+        font-size: 39px;
+    }
+
+    .parrafo4 {
+        font-size: 21px;
+    }
+
+    
+    
+}
+
+
+@media(max-width:656px){
+    #servicios{
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    #servicios h2 {
+        text-align: center;
+        margin-top: 93px;
+    }
+
+    #diseño {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center; 
+    }
+
+    #diseño h2{
+        margin-top: 53px;
+    }
+
+    .parrafo2{
+        order: 2;
+    }
+
+    #servicios1{
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    #servicios1 h2 {
+        margin-top: 60px;
+    }
+
+    .tecnologias img{
+        width: 80px;
+    }
+}
+
+@media(max-width:462px){
+    #servicios h2 {
+        font-size: 29px;
+    }
+
+    .contenido {
+        font-size: 18px;
+    }
+
+
+    #servicios1 h2 {
+        
+        margin-right: 11px;
+    }
+
+    #diseño h2 {
+        font-size: 34px;
+    }
+
+    .tecnologias img {
+        width: 73px;
+    }
+
+}

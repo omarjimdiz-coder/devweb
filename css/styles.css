@@ -1,0 +1,1627 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#header{
+    background-color: black;
+    color: white;
+    display: grid;
+}
+
+.wrap{
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    
+    
+}
+
+.logo{
+    display: grid;
+    grid-template-columns: 10% 16%;
+    padding: 18px;
+    
+    text-align: center;
+    margin-left: 34pc;
+
+}
+
+.logo h2{
+    margin-top: 19px;
+    font-size: 28px;
+    display: grid;
+}
+.menu{
+    margin-top: 30px;
+}
+
+.menu ul{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.menu ul li{
+    list-style: none;
+    text-align: center;
+    
+}
+
+.menu ul li a:hover{
+    color: #55e9bb;
+}
+
+
+
+.menu ul li a{
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all;
+}
+
+
+
+
+
+
+
+
+/*BANNER*/
+
+#banner{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    border: 10px solid white;
+    background-image: url(../img/banner.jpg);
+   /* background-position: -200px -200px;*/
+    box-shadow: 0px 0px 2px gray;
+    margin: 20px auto;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -159px;
+    }
+}
+
+
+#banner h1{
+    display: block;
+    font-size: 41px;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 1px black;
+    margin: 33px auto;
+    animation: showText 10s linear;
+}
+
+
+@keyframes showText{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        color: white;
+        opacity: 1;
+        text-shadow: 2px 2px 1px black;
+    }
+}
+
+/*Tarjetas*/
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: auto;
+    height: 294px;
+}
+
+#card{
+    display: grid;
+    border: 1px solid #cccccc;
+    box-shadow: 1px 1px 2px #dddddd;
+    overflow: hidden;
+    background-color: white;
+    cursor: pointer;
+    margin: 20px;
+    transition: all 300ms;
+}
+
+#card:hover{
+    background-color: black;
+    color: #55e9bb;
+}
+
+.card:last-child{
+    margin-right: 0px;
+}
+
+
+
+#card .icon{
+    display: block;
+    width: 50px;
+    height: 87px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 16px;
+    transition: all 300ms;
+}
+
+#card:hover .icon{
+    font-size: 70px;
+    color: #55e9bb;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+#card .category{
+    width: 100%;
+    height: 25px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    transform: all 300ms;
+}
+
+#card:hover .category{
+    color: #55e9bb;
+    animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+#card .description{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    transition: all 300ms;
+    padding-bottom: 10px;
+}
+
+#card:hover .description{
+    color: #55e9bb;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+        color: white;
+    }
+}
+
+/*¿Por que nosotros*/
+
+#whyour{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 300px;
+    color: white !important;
+    text-align: center; 
+    font-size: 34px;
+    background-color: black;
+    transition: all 300ms;
+}
+
+#whyour > h2{
+    margin-bottom: 25px;
+    padding-top: 71px;
+    font-size: 45px;
+    transition: all 1s;
+}
+
+#whyour h2:hover{
+
+    color: #55e9bb;
+}
+
+.parrafo1{
+    font-size: 24px !important;
+}
+
+/*Equipo*/
+
+#equipo{
+    color: black;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+#team{
+   display: grid;
+   grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+#ourteam{
+    text-align: center;
+    font-size: 45px;
+    color: black;
+    transition: all 300ms;
+    padding-bottom: 33px;
+    margin-top: 55px;
+    margin-bottom: 8px;
+    border: 1px solid white;
+    width: 100%;
+    transition: all 1s;
+}
+
+#ourteam:hover{
+    color: #55e9bb;
+    
+}
+
+#ourteam h2{
+    font-size: 45px;
+}
+
+.our{    
+    transition: all 300ms;
+    border: 1px solid #f8f8f8;  
+    margin-left: 540px;
+    padding-bottom: 20px;
+}
+
+.our img{
+    background-color: white;
+}
+
+.our >img:hover{
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666;
+}
+
+.personal{
+    color: black;
+    transition: all 300ms;
+}
+
+.personal:hover{
+    color: #55e9bb;
+}
+
+.puesto{
+    color: black;
+}
+
+.personal1{
+    margin-left: 37px;
+}
+
+.omar1img{
+    margin-left: 16px;
+}
+
+/*Icono de whats*/
+
+.whatsapp{
+    position: fixed;
+    right: 26px;
+    bottom: 5px;
+    width: 60px;
+    z-index: 1;
+}
+
+.whatsapp img{
+    width: 100%;
+    height: auto;
+
+}
+
+/*Contacto*/
+
+#contacto{
+    
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contacto1{
+    order: 1;
+    margin-top: 10px;
+}
+
+#datos{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 29px;
+}
+
+#devweblogo img{
+    text-align: center;
+    margin-left: -31px;
+    margin-top: 66px;
+    
+}
+
+.numero{
+    
+
+    color: white;
+
+}
+
+
+
+.correo{
+    color: white;
+}
+
+
+.correo p{
+    margin-top: 6px;
+    margin-right: 1px;
+    font-size: 15px;
+}
+
+.social{
+    color: white;
+}
+
+
+
+#contacto .nombre input{
+    width: 25%;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;
+    margin: 7px;
+}
+
+
+#contacto .form-group input{
+    width: 25%;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;
+    margin: 7px;
+}
+
+#contacto .telefono input{
+    width: 25%;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;
+    margin: 7px;
+}
+
+#contacto .enviar button{
+    width: 15%;
+    height: 50px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+input[type=text]:focus {
+    background-color: white !important;
+    color: black !important;
+    border: 3px solid #55e9bb;
+}
+
+input[type=email]:focus {
+    background-color: white !important;
+    color: black !important;
+    border: 3px solid #55e9bb;
+}
+
+.asunto input[type=text] {
+    width: 40%;
+    height: 100px;
+    padding-bottom:1px;
+    border: 3px solid whitesmoke;
+    border-radius: 4px;
+    background-color: black;
+    color:white;
+}
+
+.asunto select{
+    width: 25%;
+    height: 35px;
+    margin: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;   
+    margin: 7px;
+}
+
+
+
+#footer{
+    padding: 8px;
+    border-top: 2px solid #55e9bb ;
+}
+
+.area-footer{
+    display: grid;
+    grid-template-columns: 46% 54%;
+
+}
+
+.logo1{
+    display: grid;
+    grid-template-columns: 13% 87%;
+    margin-left: 30px;
+}
+
+
+.logo1 p{
+    margin-top: 19px;
+    font-size: 27px;
+}
+
+.info{
+    margin-top: 25px;
+    margin-left: 148px;
+}
+
+/*Pagina de servicios*/
+
+/*Que es el desarrollo*/
+
+#servicios{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: black;
+    color: white !important;
+}
+
+#servicios h2{
+    font-size: 45px;
+    margin-top: 140px;
+    margin-left: 14px;
+    transition: all 1s;
+}
+
+#servicios h2:hover{
+    color: #55e9bb;
+}
+
+.contenido{
+    font-size: 22px;
+    text-align: center;
+}
+
+.contenido{
+    padding: 36px;
+    
+}
+
+#diseño{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+}
+
+#diseño h2{
+    font-size: 45px;
+    margin-top: 124px;
+    margin-left: 14px;
+    order: 2;
+    transition: all 1s;
+}
+
+#diseño h2:hover{
+    color: #55e9bb;
+}
+
+.contenido2 {
+    text-align: center;
+    padding: 36px;
+    
+}
+
+.parrafo3{
+    font-size: 22px;
+    
+}
+
+/*back-end*/
+
+.parrafo4{
+    font-size: 22px;
+}
+
+.design1 ul a {
+    list-style: none;
+}
+
+#servicios1{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: black;
+    color: white;
+}
+
+#servicios1 h2{
+    font-size: 45px;
+    margin-top: 108px;
+    margin-right: 50px;
+    transition: all 1s;
+    text-align: center;
+}
+
+#servicios1 h2:hover{
+    color: #55e9bb;
+}
+
+/*Mensaje exitoso*/
+
+#body{
+    background-color: #29aa81;
+}
+
+#mensaje{
+    width: 478px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 383px;
+    margin-top: 130px;
+    border: 1px solid #55e9bb;
+    background-color: black;
+    color: white;
+}
+
+#mensaje h2{
+    font-size: 22px;
+}
+
+
+.regreso{
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px #cccccc;
+    color: black;
+    cursor: pointer;
+    background: whitesmoke;
+}
+
+
+
+/*Mediaqueries*/
+
+@media(max-width:448px){
+    .our {
+        margin-left: 114px;
+    }
+}
+
+@media(max-width:936px){
+    #mensaje{
+        margin-left: 206px;
+    }
+}
+
+@media(max-width:748px){
+    #mensaje{
+        margin-left: 127px;
+    }
+}
+
+@media(max-width:804px){
+    #mensaje{
+        margin-left: 148px;
+    }
+}
+
+@media(max-width:692px){
+    #mensaje{
+        margin-left: 100px;
+    }
+}
+
+@media(max-width:652px){
+    #mensaje{
+        margin-left: 106px;
+        width: 412px;
+
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:360px){
+    #mensaje {
+        width: 292px;
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:536px){
+    #mensaje{
+        margin-left: 42px;
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:510px){
+    #mensaje {
+        margin-left: 35px;
+        
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:374px){
+    #mensaje {
+        margin-left: 7px;
+        width: 316px;
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:472px){
+    #mensaje {
+        margin-left: 11px;
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+@media(max-width:422px){
+    #mensaje{
+        width: 360px;
+    }
+
+    #mensaje img{
+        width: 90px;
+    }
+}
+
+
+
+@media(max-width:1274px){
+    .logo{
+        margin-left: -107px;
+    }
+
+    #banner h1{
+        font-size: 37px;
+    }
+}
+
+@media(max-width:1148px){
+
+    .wrap{
+        max-width: 1034px;
+    }
+
+    .logo{
+        display: grid;
+        grid-template-columns: 18% 16%;
+        margin-left: -91px;
+    }
+
+    #header .logo img{
+        margin-left: 54px;
+    }
+
+    #banner h1{
+        font-size: 37px;
+    }
+}
+
+/*Responsive*/
+
+@media(max-width:1258px){
+    .logo{
+        margin-left: 498px;
+    }
+    
+}
+
+@media(max-width:1148px){
+    .logo{
+        margin-left: 455px;     
+    }
+
+    .logo h2{
+        margin-left: 6px;
+    }
+    
+    .logo1 p {
+        margin-left: 9px;
+    }
+
+    .parrafo1{
+        font-size: 24px;
+    }
+}
+
+@media(max-width:1140px){
+    .logo {
+        margin-left: 365px;
+    }
+
+    .info {
+        
+        margin-left: 76px;
+    }
+}
+
+@media(max-width:1048px){
+
+    .logo h2 {
+        margin-left: 13px;
+    }
+
+    #banner h1 {
+        font-size: 34px;
+    }
+
+    #footer {
+        padding: 34px;
+        
+    }
+
+    .logo1 p {
+        margin-left: 18px;
+    }
+
+    .info {
+        margin-left: 25px;
+    }
+}
+
+@media(max-width:938px){
+    .logo {
+        margin-left: 320px;
+    }
+
+    .logo h2 {
+        margin-left: 21px;
+    }
+
+    #banner h1 {
+        font-size: 29px;
+    }
+
+    .info {
+        margin-left: 2px;
+    }
+}
+
+@media(max-width:800px){
+
+    .logo {
+        margin-left: 226px;
+    }
+
+    #header .logo img {
+        margin-left: 47px;
+    }
+
+    .logo h2 {
+        margin-left: 27px;
+    }
+}
+
+@media(max-width:819px){
+    .correo p{
+        margin-right: 10px
+    }
+
+    .info {
+        margin-left: -17px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:834px){
+    .logo {
+        margin-left: 235px;
+    }
+
+    .logo h2 {
+        margin-left: 23px;
+    }
+
+    #banner h1 {
+        font-size: 25px;
+    }
+
+    .parrafo1 p{
+        font-size: 20px;
+    }
+
+    .personal{
+        font-size: 20px;
+    }
+
+    .personal1{
+        font-size: 20px;
+    }
+
+    .our img{
+        width: 130px;
+    }
+
+    .puesto{
+        font-size: 13px;
+    }
+
+    .enviar {
+        width: 540px;
+    }
+
+    .info {
+        margin-left: 26px;
+        font-size: 13px;
+    }
+
+    .logo1 p {
+        margin-left: 30px;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .logo {
+        margin-left: 219px;
+    }
+
+    #header .logo img {
+        margin-left: 44px;
+    }
+
+    #banner h1 {
+        font-size: 24px;
+    }
+
+    .info {
+        margin-left: -35px;
+        font-size: 14px;
+    }
+
+    .logo1 img{
+        width: 60px;
+        margin: 4px;
+    }
+
+    .logo1 p {
+        margin-left: 26px;
+
+    }
+
+    .correo{
+    
+        grid-template-columns: none;
+
+    }
+}
+
+@media(max-width:755px){
+    .logo {
+        margin-left: 213px;
+    }
+
+    .logo h2 {
+        margin-left: 33px;
+        margin-bottom: 20px;
+    }
+
+    #header .logo img {
+        margin-left: 59px;
+        margin-top: 5px;
+        width: 59px;
+    }
+    
+
+    .menu ul li a {
+        font-size: 19px;
+    }
+
+    #banner h1 {
+        font-size: 23px;
+    }
+
+    .parrafo1 p {
+        font-size: 19px;
+    }
+
+    .our img {
+        width: 120px;
+    }
+
+    .puesto{
+        font-size: 12px;
+    }
+
+    .personal {
+        font-size: 16px;
+    }
+
+    .personal1 {
+        font-size: 16px;
+    }
+
+    .info {
+        margin-left: -63px;
+        font-size: 12px;
+    }
+
+    .logo1 img{
+        width: 55px;
+        margin: 4px;
+
+    }
+
+    .logo1 p {
+        margin-left: -3px;
+        font-size: 21px;
+        
+    }
+
+    .logo1 {
+        display: grid;
+        grid-template-columns: 19% 38%;
+        
+    }
+
+    .area-footer {
+        display: grid;
+        grid-template-columns: 54% 46%;
+    }
+
+    .whatsapp img {
+        width: 90%;
+        height: auto;
+    }
+
+}
+
+@media(max-width:713px){
+    #banner h1 {
+        font-size: 21px;
+    }
+}
+
+@media(max-width:683px){
+    .logo1{
+        margin: revert;
+    }
+    
+    
+}
+
+@media(max-width:679px){
+    .logo {
+        margin-left: 172px;
+    }
+
+    #card .description {
+        font-size: 13px;
+    }
+
+    .parrafo1 p {
+        font-size: 17px;
+        padding-bottom: 12px;
+    }
+
+    .our img {
+        width: 110px;
+    }
+
+    .puesto {
+        font-size: 13px;
+    }
+
+    #contacto .nombre input {
+        width: 35%;
+        
+    }
+
+    #contacto .form-group input {
+        width: 35%;
+        
+    }
+
+    #contacto .telefono input {
+        width: 35%;
+        
+    }
+
+    .asunto select{
+        width: 35%;
+    }
+
+    .asunto input[type="text"] {
+        width: 60%;
+    }
+
+    #contacto .enviar button {
+        width: 14%;
+        font-size: 16px;
+    }
+
+    #datos > img {
+        
+        width: 82px;
+    }
+
+    .correo p {
+        
+        margin-right: 17px;
+        font-size: 14px;
+    }
+
+    .social h2{
+        font-size: 19px;
+    }
+
+    .info {
+        margin-left: -116px;
+        font-size: 13px;
+        margin-bottom: -12px;
+    }
+
+    .logo1 {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    .logo1 p {
+        margin-left: -8px;
+        
+    }
+
+    .logo1 img {
+        width: 52px;
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+
+    .area-footer {
+        height: 56px;
+    }
+}
+
+@media(max-width:649px){
+    .logo {
+        margin-left: 151px;
+    }
+
+    .logo h2 {
+        margin-left: 36px;
+        
+    }
+
+    #banner h1 {
+        font-size: 18px;
+    }
+
+    #card .category{
+        font-size: 19px;
+    }
+}
+
+@media(max-width:607px){
+    .logo h2 {
+        margin-left: 46px;
+    }
+
+    .correo p {
+        margin-right: 49px;
+        font-size: 12px;
+    }
+
+    .logo1 p {
+        margin-left: -3px;
+    }
+}
+
+@media(max-width:583px){
+    .menu ul li a {
+        font-size: 18px;
+    }
+
+    .logo {
+        margin-left: 131px;
+    }
+
+    #banner h1 {
+        font-size: 16px;
+    }
+}
+
+
+
+
+@media(max-width:525px){
+
+    .logo h2 {
+        
+        font-size: 24px;
+        margin-top: 23px;
+    }
+
+    #header .logo img {
+        
+        margin-top: 10px;
+        width: 53px;
+    }
+
+    .logo {
+        margin-left: 97px;
+    }
+
+    .logo h2 {
+        margin-left: 48px;
+    }
+    
+    #banner h1 {
+        font-size: 14px;
+    }
+
+    #cards{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 33%);
+        height: 990px;
+    }
+
+    #card {
+        width: 341px;
+        margin-left: 106px;
+        height: 314px;
+    }
+
+    #card .icon{
+        width: 66px;
+    }
+
+    #card .category {
+        font-size: 27px;
+    }
+
+    #card .description {
+        font-size: 21px;
+    }
+
+    #whyour > h2{
+        font-size: 40px;
+    }
+
+    .parrafo1 p {
+        font-size: 16px;
+        
+    }
+
+    #ourteam h2 {
+        font-size: 40px;
+    }
+
+    #team {
+        display: grid;
+        grid-template-columns:none;
+        grid-template-rows: repeat(4, 25%);
+    }
+
+    .our {
+        
+        margin-left: 156px;
+    
+    }
+
+    .our img {
+        width: 179px;
+    }
+
+    .personal {
+        font-size: 22px;
+        margin-left: 12px;
+    }
+
+    .personal1 {
+        font-size: 22px;
+        margin-left:49px;
+    }
+
+    .puesto {
+        font-size: 18px;
+    }
+
+    #contacto{
+        display: grid;
+        grid-template-columns: none;
+        text-align: center;
+
+    }
+
+    #contacto1{
+        margin-left: 0px;
+    }
+
+
+
+    #datos > img {
+        width: 84px;
+        margin-left: 72px;
+    }
+
+    .numero {
+        display: grid;
+        grid-template-columns: 12% 137%;
+        margin-left: 41px;
+    }
+
+    .numero img{
+        width: 30px;
+        margin-top: 5px;
+    }
+
+    .numero p{
+        font-size: 17px;
+        margin-left: -137px;
+    }
+
+    .correo{
+        display: grid;
+        grid-template-columns: none;
+
+    }
+
+    .correo img{
+        width: 30px;
+        margin-left: 106px;
+    }
+
+    .correo p {
+        
+        font-size: 16px;
+    }
+
+    .social{
+        margin-left: -16px;
+    }
+
+    #contacto .nombre input {
+        width: 35%;
+    }
+
+    #contacto .form-group input {
+        width: 35%;
+    }
+
+    #contacto .telefono input {
+        width: 35%;
+    }
+
+    .asunto select {
+        width: 35%;
+    }
+
+    .asunto input[type="text"] {
+        width: 60%;
+    }
+    
+
+    .logo1 img{
+        width: 48px;
+        margin: 9px;
+    }
+
+    .logo1 p{
+        margin-left: 12px;
+    }
+
+    .info {
+        margin-left: -35px;
+        font-size: 14px;
+        margin-bottom: -43px;
+    }
+
+
+}
+
+@media(max-width:498px){
+    #contacto{
+        text-align: start;
+    }
+}
+
+@media(max-width:485px){
+    .logo {
+        margin-left: 80px;
+    }
+
+    #banner h1 {
+        font-size: 12px;
+    }
+
+    #card {
+    
+        margin-left: 79px;
+        
+    }
+
+    #whyour > h2 {
+        font-size: 33px;
+    }
+
+    .parrafo1 p {
+        font-size: 15px;
+    }
+
+    #ourteam h2 {
+        font-size: 33px;
+    }
+
+  
+
+    #contacto .nombre input {
+        width: 30%;
+    }
+
+    #contacto .form-group input {
+        width: 30%;
+    }
+
+    #contacto .telefono input {
+        width: 30%;
+    }
+
+    .asunto select {
+        width: 30%;
+    }
+
+    .asunto input[type="text"] {
+        width: 60%;
+    }
+
+    .logo1 p {
+        margin-left: 15px;
+    }
+}
+
+
+@media(max-width:478px){
+    #devweblogo img{
+        width: 90px;
+    }
+
+    .correo p {
+        font-size: 14px;
+    }
+
+    .correo img{
+        margin-left: 86px;
+    }
+}
+
+@media(max-width:439px){
+    .logo {
+        margin-left: 69px;
+    }
+
+    .logo h2 {
+        margin-left: 56px;
+    }
+
+    .menu {
+        margin-top: 32px;
+    }
+
+    .menu ul li a {
+        font-size: 17px;
+    }
+
+    #banner h1 {
+        font-size: 11px;
+    }
+
+    #card {
+        margin-left: 54px;
+    }
+
+    .our {
+        margin-left: 106px;
+    }
+
+    .numero p {
+        font-size: 17px;
+        margin-left: -123px;
+    }
+
+    .logo1 p {
+        margin-left: 18px;
+    }
+}
+
+
+@media(max-width:395px)
+{
+    .logo h2 {
+        margin-left: 60px;
+    }
+
+    .logo {
+        margin-left: 46px;
+    }
+
+    #banner h1 {
+        font-size: 9px;
+    }
+
+    #card {
+        
+        margin-left: 25px;
+    }
+
+    .our {
+        margin-left: 88px;
+    }
+
+    .numero p {
+        font-size: 15px;
+        margin-left: -87px;
+    }
+
+    .correo p {
+        font-size: 12px;
+    }
+
+    .correo img {
+        margin-left: 73px;
+    }
+
+    .info {
+        margin-left: -10px;
+        font-size: 11px;
+        
+    }
+
+    .logo1 img {
+        width: 48px;
+        margin: 7px;
+    }
+
+    .logo1 {
+        margin-left: -22px;
+    
+    }
+
+    .logo1 p {
+        margin-left: 21px;
+        font-size: 22px;
+    }
+
+    .whatsapp{
+        margin-right: 50px;
+
+    }
+}
+
+@media(max-width:382px){
+    .asunto input[type="text"] {
+        width: 43%;
+    }
+}
+
+
+@media(max-width:360px){
+    .logo {
+        margin-left: 37px;
+    }
+
+    #banner h1 {
+        font-size: 18px;
+    }
+
+    #card {
+        margin-left: 8px;
+    }
+
+    .numero img {
+        width: 26px;
+        
+    }
+
+    .numero p {
+       
+        margin-left: -70px;
+    }
+
+    .correo img {
+        width: 26px;
+        margin-left: 63px;
+    }
+
+    .correo p {
+        font-size: 11px;
+    }
+
+    #devweblogo img {
+        width: 74px;
+    }
+
+    .info {
+        margin-left: -3px;
+        font-size: 11px;
+    }
+}
